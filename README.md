@@ -27,10 +27,10 @@ This will start the server at http://localhost:3000.
 ### Endpoints
 
 1. **GET** /api/comic-books/: Returns a list of all books. 
-2. **GET** /api/comic-books/:id: Returns the book with the given ID. 
+2. **GET** /api/comic-books/:id : Returns the book with the given ID. 
 3. **POST** /api/comic-books: Creates a new book. 
-4. **PATCH** /api/comic-books/:id: Updates the book with the given ID. 
-5. **DELETE** /api/comic-books/:id: Deletes the book with the given ID.
+4. **PATCH** /api/comic-books/:id : Updates the book with the given ID. 
+5. **DELETE** /api/comic-books/:id : Deletes the book with the given ID.
 
 ### Sorting and Filtering
 
