@@ -26,28 +26,15 @@ This will start the server at http://localhost:3000.
 
 ### Endpoints
 
-**GET** /api/comic-books/: Returns a list of all books.
-**GET** /api/comic-books/:id: Returns the book with the given ID.
-**POST** /api/comic-books: Creates a new book.
-**PATCH** /api/comic-books/:id: Updates the book with the given ID.
-**DELETE** /api/comic-books/:id: Deletes the book with the given ID.
-
-Example Request Body for Creating a Comic Book
-
-{
-    "title": "Watchmen",
-    "author": "Alan Moore",
-    "price": 500,
-    "discount" : 0,
-    "genre": "Science Fiction",
-    "publishedOn": "2005",
-    "totalPages": 200,
-    "condition": "Fair"
-}
+1. **GET** /api/comic-books/: Returns a list of all books. 
+2. **GET** /api/comic-books/:id: Returns the book with the given ID. 
+3. **POST** /api/comic-books: Creates a new book. 
+4. **PATCH** /api/comic-books/:id: Updates the book with the given ID. 
+5. **DELETE** /api/comic-books/:id: Deletes the book with the given ID.
 
 ### Sorting and Filtering
 
-**GET** /api/comic-books?sortBy=price&sortOrder=desc: Sort books by price
-**GET** /api/comic-books/?sortBy=discount&sortOrder=asc: Sort books by discount 
-**GET** /api/comic-books?genre=Superhero: Filter books by genre
-**GET** /api/comic-books/?min_price=1500&max_price=2000: Filter books with a minimum price of 1500 and maximum price of 2000
+1. **GET** /api/comic-books?sortBy=price&sortOrder=desc: Sort books by price
+2. **GET** /api/comic-books/?sortBy=discount&sortOrder=asc: Sort books by discount 
+3. **GET** /api/comic-books?genre=Superhero: Filter books by genre
+4. **GET** /api/comic-books/?min_price=1500&max_price=2000: Filter books with a minimum price of 1500 and maximum price of 2000
