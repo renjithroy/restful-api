@@ -22,6 +22,9 @@ node app.js
 
 This will start the server at http://localhost:3000.
 
+## Postman Collection
+To explore and interact with the API, you can use the [Postman collection available here](https://www.postman.com/avionics-geologist-27790568/workspace/my-space/collection/25813116-616701ba-3719-4d13-90de-0be9eea0fe8f?action=share&creator=25813116).
+
 ## Usage
 
 ### Endpoints
