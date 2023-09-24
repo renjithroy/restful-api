@@ -9,16 +9,17 @@ module.exports.getAllBooks = async (req, res) => {
         // Create an empty filter object to store the query parameters (title, author, genre, etc)
         const filter = {};
 
-        // Check if query parameter is present and add it to the filter object as a regular expression with case-insensitive options
+        // Check if query parameter is present and add it to the filter object as a regular expression (partial matching) with case-insensitive options
         if (req.query.title) filter.title = { $regex: req.query.title, $options: 'i' };
         if (req.query.author) filter.author = { $regex: req.query.author, $options: 'i' };
 
-        // Check if query parameter is present and add it to the filter object
+        // Check if query parameter is present and add it to the filter object || No partial matching or case insensitivity
         if (req.query.publishedOn) filter.publishedOn = req.query.publishedOn;
-        if (req.query.pages) filter.pages = req.query.pages;
+        if (req.query.totalPages) filter.totalPages = req.query.totalPages;
         if (req.query.condition) filter.condition = req.query.condition;
         if (req.query.genre) filter.genre = req.query.genre;
 
+        /* Filter based on Price */
         // Get min and max price from the request query parameters
         let min_price = req.query.min_price;
         let max_price = req.query.max_price;
@@ -41,9 +42,8 @@ module.exports.getAllBooks = async (req, res) => {
         if (req.query.sortBy) {
             // If sortOrder parameter is desc, set sort[sortOrder] as -1 (represents descending). 
             // Ex: If sortBy is price and sortOrder is desc, then sort["price"] = -1 will create sort = {price: -1}
-            // Ex: If sortBy is discount and sortOrder is asc, then sort["discount"] = 1 will create sort = {discount: 1}
             if (req.query.sortOrder === 'desc') {
-                sort[req.query.sortBy] = -1;
+                sort[req.query.sortBy] = -1; // adds a key value pair to sort object 
             } else {
                 sort[req.query.sortBy] = 1;
             }
@@ -122,8 +122,8 @@ module.exports.updateBook = async (req, res) => {
 }
 
 module.exports.deleteBook = async (req, res) => {
-    const id = req.params.id;
     try {
+        const id = req.params.id;
         const deletedBook = await ComicBook.findByIdAndRemove(id);
         if (!deletedBook) {
             // If there are no books with the input id, return error message
