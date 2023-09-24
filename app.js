@@ -10,9 +10,11 @@ const cors = require("cors"); // To enable Cross-Origin Resource Sharing
 // Import Comicbook routes
 const comicBooksRoutes = require("./routes/comicBooks");
 
+//mongodb://localhost:27017/bookStore
+
 // Connect to the database
 mongoose
-    .connect("mongodb://localhost:27017/bookStore")
+    .connect(process.env.DB_URL)
     .then(() => {
         console.log("Database connected");
     })
