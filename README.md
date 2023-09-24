@@ -10,16 +10,18 @@ View the [Postman collection available here](https://www.postman.com/avionics-ge
 ## Usage
 
 Use this format for Inserting records:
-  {
-    "title": "Alchemist",
-    "author": "Paulo Coelho",
-    "publishedOn": "1960",
-    "price": 899,
-    "discount": 50,
-    "totalPages": 418,
-    "condition": "Like new",
-    "genre": ["Horror", "Fantasy"]
-  }
+```json
+{
+  "title": "Alchemist",
+  "author": "Paulo Coelho",
+  "publishedOn": "1960",
+  "price": 899,
+  "discount": 50,
+  "totalPages": 418,
+  "condition": "Like new",
+  "genre": ["Horror", "Fantasy"]
+}
+```
 
 ### Endpoints
 
