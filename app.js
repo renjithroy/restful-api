@@ -36,6 +36,8 @@ app.all("*", (req, res) => {
     res.send("Resource does not exist. ");
 })
 
-app.listen(3000, () => {
+const port = process.env.PORT || 3000;
+
+app.listen(port, () => {
     console.log("Server started successfully");
 })
