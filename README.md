@@ -2,7 +2,7 @@
 # Bookstore REST API
 This is a RESTful API built using Node.js, Express.js, and MongoDB. The API provides endpoints for creating, reading, updating, and deleting books along with options to Sort and Filter books based on multiple factors.
 
-**Interact with the API:** [Bookstore API](https://bookstore-api-r2r0.onrender.com/api/comic-books).
+**Interact with the API:** [Bookstore API](https://bookstore-restapi-8bf00d0fc683.herokuapp.com/api/comic-books).
 
 ## Postman Collection
 View the [Postman collection available here](https://www.postman.com/avionics-geologist-27790568/workspace/my-space/collection/25813116-616701ba-3719-4d13-90de-0be9eea0fe8f?action=share&creator=25813116).
